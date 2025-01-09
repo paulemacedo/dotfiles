@@ -1,0 +1,544 @@
+{
+  "log_level": "LOG_LEVEL_INFO",
+  "log_subprocesses_to_journal": true,
+  "dbus": {
+    "enabled": true,
+    "connect_timeout": "20s",
+    "connect_interval": "0.200s",
+    "notifications": {
+      "enabled": true
+    },
+    "systray": {
+      "enabled": true
+    },
+    "shortcuts": {
+      "enabled": true
+    },
+    "brightness": {
+      "enabled": true,
+      "adjust_step_percent": 5,
+      "min_brightness": 1,
+      "enable_logind": true,
+      "hud_notifications": true
+    },
+    "power": {
+      "enabled": true,
+      "low_percent": 10,
+      "critical_percent": 5,
+      "low_command": "",
+      "critical_command": "",
+      "hud_notifications": true
+    }
+  },
+  "audio": {
+    "enabled": true,
+    "volume_step_percent": 5,
+    "volume_exceed_maximum": false,
+    "hud_notifications": true
+  },
+  "panels": [
+    {
+      "id": "panel0",
+      "edge": "EDGE_RIGHT",
+      "size": 64,
+      "monitor": "",
+      "modules": [
+        {
+          "pager": {
+            "icon_size": 12,
+            "active_monitor_only": false,
+            "scroll_wrap_workspaces": true,
+            "scroll_include_inactive": true,
+            "enable_workspace_names": false,
+            "pinned": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "ignore_windows": []
+          }
+        },
+        {
+          "spacer": {
+            "size": 16,
+            "expand": false
+          }
+        },
+        {
+          "taskbar": {
+            "icon_size": 48,
+            "active_workspace_only": true,
+            "active_monitor_only": true,
+            "group_tasks": true,
+            "hide_indicators": false,
+            "expand": true,
+            "max_size": 0,
+            "pinned": []
+          }
+        },
+        {
+          "spacer": {
+            "size": 16,
+            "expand": false
+          }
+        },
+        {
+          "systray": {
+            "icon_size": 22,
+            "menu_icon_size": 22,
+            "auto_hide_statuses": [
+              "STATUS_UNSPECIFIED",
+              "STATUS_PASSIVE",
+              "STATUS_ACTIVE"
+            ],
+            "auto_hide_delay": "4s",
+            "pinned": [
+              "nm-applet",
+              "chrome_status_icon_1"
+            ],
+            "modules": [
+              {
+                "power": {
+                  "icon_size": 22,
+                  "icon_symbolic": true
+                }
+              }
+            ]
+          }
+        },
+        {
+          "notifications": {
+            "icon_size": 24,
+            "notification_icon_size": 48,
+            "default_timeout": "7s",
+            "position": "POSITION_TOP_RIGHT",
+            "margin": 24,
+            "persistent": []
+          }
+        },
+        {
+          "hud": {
+            "notification_icon_size": 64,
+            "timeout": "2s",
+            "position": "POSITION_BOTTOM",
+            "margin": 256
+          }
+        },
+        {
+          "spacer": {
+            "size": 16,
+            "expand": false
+          }
+        },
+        {
+          "audio": {
+            "icon_size": 32,
+            "icon_symbolic": true,
+            "command_mixer": "pavucontrol"
+          }
+        },
+        {
+          "spacer": {
+            "size": 16,
+            "expand": false
+          }
+        },
+        {
+          "clock": {
+            "time_format": "15:04",
+            "date_format": "2006-01-02",
+            "tooltip_time_format": "15:04",
+            "tooltip_date_format": "Mon, 02 Jan 2006 MST",
+            "additional_regions": [
+              "America/Los_Angeles",
+              "America/Chicago",
+              "America/New_York",
+              "Europe/London"
+            ]
+          }
+        },
+        {
+          "spacer": {
+            "size": 16,
+            "expand": false
+          }
+        },
+        {
+          "session": {
+            "icon_size": 48,
+            "icon_symbolic": true,
+            "overlay_icon_size": 96,
+            "overlay_icon_symbolic": true,
+            "command_logout": "loginctl terminate-session $XDG_SESSION_ID",
+            "command_reboot": "systemctl reboot",
+            "command_suspend": "systemctl suspend",
+            "command_shutdown": "systemctl poweroff"
+          }
+        },
+        {
+          "spacer": {
+            "size": 16,
+            "expand": false
+          }
+        }
+      ]
+    }
+  ],
+  "bar.customModules.updates.pollingInterval": 1440000,
+  "theme.bar.menus.background": "#362D46",
+  "theme.bar.background": "#362D46",
+  "theme.bar.buttons.media.icon": "#DECCFF",
+  "theme.bar.buttons.media.text": "#CECCFF",
+  "theme.bar.buttons.icon": "#DECCFF",
+  "theme.bar.buttons.text": "#CECCFF",
+  "theme.bar.buttons.hover": "#5D4B7D",
+  "theme.bar.buttons.background": "#372952",
+  "theme.bar.menus.text": "#FFFFFF",
+  "theme.bar.menus.border.color": "#4C3A6B",
+  "theme.bar.buttons.media.background": "#372952",
+  "theme.bar.menus.menu.volume.text": "#FFFFFF",
+  "theme.bar.menus.menu.volume.card.color": "#4C3A6B",
+  "theme.bar.menus.menu.volume.label.color": "#C3AAF0",
+  "theme.bar.menus.popover.text": "#CECCFF",
+  "theme.bar.menus.popover.background": "#372952",
+  "theme.bar.menus.menu.dashboard.powermenu.shutdown": "#E69AB3",
+  "theme.bar.menus.menu.dashboard.powermenu.confirmation.deny": "#E69AB3",
+  "theme.bar.menus.menu.dashboard.powermenu.confirmation.confirm": "#E6C89A",
+  "theme.bar.menus.menu.dashboard.powermenu.confirmation.button_text": "#362D46",
+  "theme.bar.menus.menu.dashboard.powermenu.confirmation.body": "#FFFFFF",
+  "theme.bar.menus.menu.dashboard.powermenu.confirmation.label": "#CECCFF",
+  "theme.bar.menus.menu.dashboard.powermenu.confirmation.border": "#4C3A6B",
+  "theme.bar.menus.menu.dashboard.powermenu.confirmation.background": "#362D46",
+  "theme.bar.menus.menu.dashboard.powermenu.confirmation.card": "#4C3A6B",
+  "theme.bar.menus.menu.notifications.switch.puck": "#5D4B7D",
+  "theme.bar.menus.menu.notifications.switch.disabled": "#4C3A6B",
+  "theme.bar.menus.menu.notifications.switch.enabled": "#DECCFF",
+  "theme.bar.menus.menu.notifications.clear": "#E69AB3",
+  "theme.bar.menus.menu.notifications.switch_divider": "#5D4B7D",
+  "theme.bar.menus.menu.notifications.border": "#4C3A6B",
+  "theme.bar.menus.menu.notifications.card": "#4C3A6B",
+  "theme.bar.menus.menu.notifications.background": "#362D46",
+  "theme.bar.menus.menu.notifications.no_notifications_label": "#4C3A6B",
+  "theme.bar.menus.menu.notifications.label": "#DECCFF",
+  "theme.bar.menus.menu.dashboard.monitors.disk.label": "#C3AAF0",
+  "theme.bar.menus.menu.dashboard.monitors.disk.bar": "#C3AAF0",
+  "theme.bar.menus.menu.dashboard.monitors.disk.icon": "#C3AAF0",
+  "theme.bar.menus.menu.dashboard.monitors.gpu.label": "#E6C89A",
+  "theme.bar.menus.menu.dashboard.monitors.gpu.bar": "#E6C89A",
+  "theme.bar.menus.menu.dashboard.monitors.gpu.icon": "#E6C89A",
+  "theme.bar.menus.menu.dashboard.monitors.ram.label": "#DECCFF",
+  "theme.bar.menus.menu.dashboard.monitors.ram.bar": "#DECCFF",
+  "theme.bar.menus.menu.dashboard.monitors.ram.icon": "#DECCFF",
+  "theme.bar.menus.menu.dashboard.monitors.cpu.label": "#E69AB3",
+  "theme.bar.menus.menu.dashboard.monitors.cpu.bar": "#E69AB3",
+  "theme.bar.menus.menu.dashboard.monitors.cpu.icon": "#E69AB3",
+  "theme.bar.menus.menu.dashboard.monitors.bar_background": "#5D4B7D",
+  "theme.bar.menus.menu.dashboard.directories.right.bottom.color": "#CECCFF",
+  "theme.bar.menus.menu.dashboard.directories.right.middle.color": "#DECCFF",
+  "theme.bar.menus.menu.dashboard.directories.right.top.color": "#E6C89A",
+  "theme.bar.menus.menu.dashboard.directories.left.bottom.color": "#E69AB3",
+  "theme.bar.menus.menu.dashboard.directories.left.middle.color": "#DECCFF",
+  "theme.bar.menus.menu.dashboard.directories.left.top.color": "#C3AAF0",
+  "theme.bar.menus.menu.dashboard.controls.input.text": "#362D46",
+  "theme.bar.menus.menu.dashboard.controls.input.background": "#C3AAF0",
+  "theme.bar.menus.menu.dashboard.controls.volume.text": "#362D46",
+  "theme.bar.menus.menu.dashboard.controls.volume.background": "#E69AB3",
+  "theme.bar.menus.menu.dashboard.controls.notifications.text": "#362D46",
+  "theme.bar.menus.menu.dashboard.controls.notifications.background": "#DECCFF",
+  "theme.bar.menus.menu.dashboard.controls.bluetooth.text": "#362D46",
+  "theme.bar.menus.menu.dashboard.controls.bluetooth.background": "#CECCFF",
+  "theme.bar.menus.menu.dashboard.controls.wifi.text": "#362D46",
+  "theme.bar.menus.menu.dashboard.controls.wifi.background": "#C3AAF0",
+  "theme.bar.menus.menu.dashboard.controls.disabled": "#7C65A3",
+  "theme.bar.menus.menu.dashboard.shortcuts.recording": "#E6C89A",
+  "theme.bar.menus.menu.dashboard.shortcuts.text": "#362D46",
+  "theme.bar.menus.menu.dashboard.shortcuts.background": "#CECCFF",
+  "theme.bar.menus.menu.dashboard.powermenu.sleep": "#CECCFF",
+  "theme.bar.menus.menu.dashboard.powermenu.logout": "#E6C89A",
+  "theme.bar.menus.menu.dashboard.powermenu.restart": "#DECCFF",
+  "theme.bar.menus.menu.dashboard.profile.name": "#C3AAF0",
+  "theme.bar.menus.menu.dashboard.border.color": "#4C3A6B",
+  "theme.bar.menus.menu.dashboard.background.color": "#362D46",
+  "theme.bar.menus.menu.dashboard.card.color": "#4C3A6B",
+  "theme.bar.menus.menu.clock.weather.hourly.temperature": "#C3AAF0",
+  "theme.bar.menus.menu.clock.weather.hourly.icon": "#C3AAF0",
+  "theme.bar.menus.menu.clock.weather.hourly.time": "#C3AAF0",
+  "theme.bar.menus.menu.clock.weather.thermometer.extremelycold": "#CECCFF",
+  "theme.bar.menus.menu.clock.weather.thermometer.cold": "#ADAAF0",
+  "theme.bar.menus.menu.clock.weather.thermometer.moderate": "#CECCFF",
+  "theme.bar.menus.menu.clock.weather.thermometer.hot": "#DECCFF",
+  "theme.bar.menus.menu.clock.weather.thermometer.extremelyhot": "#DECCFF",
+  "theme.bar.menus.menu.clock.weather.stats": "#CECCFF",
+  "theme.bar.menus.menu.clock.weather.status": "#C3AAF0",
+  "theme.bar.menus.menu.clock.weather.temperature": "#E6C89A",
+  "theme.bar.menus.menu.clock.weather.icon": "#DECCFF",
+  "theme.bar.menus.menu.clock.calendar.contextdays": "#7C65A3",
+  "theme.bar.menus.menu.clock.calendar.days": "#DECCFF",
+  "theme.bar.menus.menu.clock.calendar.currentday": "#CECCFF",
+  "theme.bar.menus.menu.clock.calendar.paginator": "#CECCFF",
+  "theme.bar.menus.menu.clock.calendar.weekdays": "#CECCFF",
+  "theme.bar.menus.menu.clock.calendar.yearmonth": "#C3AAF0",
+  "theme.bar.menus.menu.clock.time.timeperiod": "#E6C89A",
+  "theme.bar.menus.menu.clock.time.time": "#DECCFF",
+  "theme.bar.menus.menu.clock.text": "#CECCFF",
+  "theme.bar.menus.menu.clock.border.color": "#4C3A6B",
+  "theme.bar.menus.menu.clock.background.color": "#362D46",
+  "theme.bar.menus.menu.clock.card.color": "#4C3A6B",
+  "theme.bar.menus.menu.battery.slider.puck": "#5D4B7D",
+  "theme.bar.menus.menu.battery.slider.backgroundhover": "#6B578F",
+  "theme.bar.menus.menu.battery.slider.background": "#4C3A6B",
+  "theme.bar.menus.menu.battery.slider.primary": "#DECCFF",
+  "theme.bar.menus.menu.battery.icons.active": "#DECCFF",
+  "theme.bar.menus.menu.battery.icons.passive": "#947AC2",
+  "theme.bar.menus.menu.battery.listitems.active": "#DECCFF",
+  "theme.bar.menus.menu.battery.listitems.passive": "#CECCFF",
+  "theme.bar.menus.menu.battery.text": "#DECCFF",
+  "theme.bar.menus.menu.battery.label.color": "#DECCFF",
+  "theme.bar.menus.menu.battery.border.color": "#4C3A6B",
+  "theme.bar.menus.menu.battery.background.color": "#362D46",
+  "theme.bar.menus.menu.battery.card.color": "#4C3A6B",
+  "theme.bar.menus.menu.systray.dropdownmenu.divider": "#4C3A6B",
+  "theme.bar.menus.menu.systray.dropdownmenu.text": "#DECCFF",
+  "theme.bar.menus.menu.systray.dropdownmenu.background": "#362D46",
+  "theme.bar.menus.menu.bluetooth.iconbutton.active": "#CECCFF",
+  "theme.bar.menus.menu.bluetooth.iconbutton.passive": "#DECCFF",
+  "theme.bar.menus.menu.bluetooth.icons.active": "#CECCFF",
+  "theme.bar.menus.menu.bluetooth.icons.passive": "#947AC2",
+  "theme.bar.menus.menu.bluetooth.listitems.active": "#CECCFF",
+  "theme.bar.menus.menu.bluetooth.listitems.passive": "#DECCFF",
+  "theme.bar.menus.menu.bluetooth.switch.puck": "#5D4B7D",
+  "theme.bar.menus.menu.bluetooth.switch.disabled": "#4C3A6B",
+  "theme.bar.menus.menu.bluetooth.switch.enabled": "#CECCFF",
+  "theme.bar.menus.menu.bluetooth.switch_divider": "#5D4B7D",
+  "theme.bar.menus.menu.bluetooth.status": "#C3AAF0",
+  "theme.bar.menus.menu.bluetooth.text": "#DECCFF",
+  "theme.bar.menus.menu.bluetooth.label.color": "#CECCFF",
+  "theme.bar.menus.menu.bluetooth.border.color": "#4C3A6B",
+  "theme.bar.menus.menu.bluetooth.background.color": "#362D46",
+  "theme.bar.menus.menu.bluetooth.card.color": "#4C3A6B",
+  "theme.bar.menus.menu.network.iconbuttons.active": "#C3AAF0",
+  "theme.bar.menus.menu.network.iconbuttons.passive": "#DECCFF",
+  "theme.bar.menus.menu.network.icons.active": "#C3AAF0",
+  "theme.bar.menus.menu.network.icons.passive": "#947AC2",
+  "theme.bar.menus.menu.network.listitems.active": "#C3AAF0",
+  "theme.bar.menus.menu.network.listitems.passive": "#DECCFF",
+  "theme.bar.menus.menu.network.status.color": "#C3AAF0",
+  "theme.bar.menus.menu.network.text": "#DECCFF",
+  "theme.bar.menus.menu.network.label.color": "#C3AAF0",
+  "theme.bar.menus.menu.network.border.color": "#4C3A6B",
+  "theme.bar.menus.menu.network.background.color": "#362D46",
+  "theme.bar.menus.menu.network.card.color": "#4C3A6B",
+  "theme.bar.menus.menu.volume.input_slider.puck": "#5D4B7D",
+  "theme.bar.menus.menu.volume.input_slider.backgroundhover": "#6B578F",
+  "theme.bar.menus.menu.volume.input_slider.background": "#4C3A6B",
+  "theme.bar.menus.menu.volume.input_slider.primary": "#DECCFF",
+  "theme.bar.menus.menu.volume.audio_slider.puck": "#5D4B7D",
+  "theme.bar.menus.menu.volume.audio_slider.backgroundhover": "#6B578F",
+  "theme.bar.menus.menu.volume.audio_slider.background": "#4C3A6B",
+  "theme.bar.menus.menu.volume.audio_slider.primary": "#DECCFF",
+  "theme.bar.menus.menu.volume.icons.active": "#DECCFF",
+  "theme.bar.menus.menu.volume.icons.passive": "#947AC2",
+  "theme.bar.menus.menu.volume.iconbutton.active": "#DECCFF",
+  "theme.bar.menus.menu.volume.iconbutton.passive": "#CECCFF",
+  "theme.bar.menus.menu.volume.listitems.active": "#DECCFF",
+  "theme.bar.menus.menu.volume.listitems.passive": "#CECCFF",
+  "theme.bar.menus.menu.volume.border.color": "#4C3A6B",
+  "theme.bar.menus.menu.volume.background.color": "#362D46",
+  "theme.bar.menus.menu.media.slider.puck": "#5D4B7D",
+  "theme.bar.menus.menu.media.slider.backgroundhover": "#6B578F",
+  "theme.bar.menus.menu.media.slider.background": "#4C3A6B",
+  "theme.bar.menus.menu.media.slider.primary": "#CECCFF",
+  "theme.bar.menus.menu.media.buttons.text": "#362D46",
+  "theme.bar.menus.menu.media.buttons.background": "#DECCFF",
+  "theme.bar.menus.menu.media.buttons.enabled": "#FFCCDD",
+  "theme.bar.menus.menu.media.buttons.inactive": "#5D4B7D",
+  "theme.bar.menus.menu.media.border.color": "#4C3A6B",
+  "theme.bar.menus.menu.media.background.color": "#362D46",
+  "theme.bar.menus.menu.media.album": "#DECCFF",
+  "theme.bar.menus.menu.media.artist": "#FFCCDD",
+  "theme.bar.menus.menu.media.song": "#CECCFF",
+  "theme.bar.menus.tooltip.text": "#CECCFF",
+  "theme.bar.menus.tooltip.background": "#362D46",
+  "theme.bar.menus.dropdownmenu.divider": "#4C3A6B",
+  "theme.bar.menus.dropdownmenu.text": "#CECCFF",
+  "theme.bar.menus.dropdownmenu.background": "#362D46",
+  "theme.bar.menus.slider.puck": "#5D4B7D",
+  "theme.bar.menus.slider.backgroundhover": "#6B578F",
+  "theme.bar.menus.slider.background": "#4C3A6B",
+  "theme.bar.menus.slider.primary": "#FFCCDD",
+  "theme.bar.menus.progressbar.background": "#6B578F",
+  "theme.bar.menus.progressbar.foreground": "#FFCCDD",
+  "theme.bar.menus.iconbuttons.active": "#FFCCDD",
+  "theme.bar.menus.iconbuttons.passive": "#CECCFF",
+  "theme.bar.menus.buttons.text": "#362D46",
+  "theme.bar.menus.buttons.disabled": "#5D4B7D",
+  "theme.bar.menus.buttons.active": "#FFCCDD",
+  "theme.bar.menus.buttons.default": "#CECCFF",
+  "theme.bar.menus.switch.puck": "#5D4B7D",
+  "theme.bar.menus.switch.disabled": "#4C3A6B",
+  "theme.bar.menus.switch.enabled": "#FFCCDD",
+  "theme.bar.menus.icons.active": "#FFCCDD",
+  "theme.bar.menus.icons.passive": "#5D4B7D",
+  "theme.bar.menus.listitems.active": "#FFCCDD",
+  "theme.bar.menus.listitems.passive": "#CECCFF",
+  "theme.bar.menus.label": "#FFCCDD",
+  "theme.bar.menus.feinttext": "#4C3A6B",
+  "theme.bar.menus.dimtext": "#5D4B7D",
+  "theme.bar.menus.cards": "#362D46",
+  "theme.bar.buttons.notifications.total": "#ADAAF0",
+  "theme.bar.buttons.notifications.icon": "#ADAAF0",
+  "theme.bar.buttons.notifications.hover": "#5D4B7D",
+  "theme.bar.buttons.notifications.background": "#362D46",
+  "theme.bar.buttons.clock.icon": "#C3AAF0",
+  "theme.bar.buttons.clock.text": "#C3AAF0",
+  "theme.bar.buttons.clock.hover": "#5D4B7D",
+  "theme.bar.buttons.clock.background": "#362D46",
+  "theme.bar.buttons.battery.icon": "#ADAAF0",
+  "theme.bar.buttons.battery.text": "#ADAAF0",
+  "theme.bar.buttons.battery.hover": "#5D4B7D",
+  "theme.bar.buttons.battery.background": "#362D46",
+  "theme.bar.buttons.systray.hover": "#5D4B7D",
+  "theme.bar.buttons.systray.background": "#362D46",
+  "theme.bar.buttons.bluetooth.icon": "#C3AAF0",
+  "theme.bar.buttons.bluetooth.text": "#C3AAF0",
+  "theme.bar.buttons.bluetooth.hover": "#5D4B7D",
+  "theme.bar.buttons.bluetooth.background": "#362D46",
+  "theme.bar.buttons.network.icon": "#F0D4AA",
+  "theme.bar.buttons.network.text": "#F0D4AA",
+  "theme.bar.buttons.network.hover": "#5D4B7D",
+  "theme.bar.buttons.network.background": "#362D46",
+  "theme.bar.buttons.volume.hover": "#5D4B7D",
+  "theme.bar.buttons.volume.background": "#362D46",
+  "theme.bar.buttons.media.hover": "#5D4B7D",
+  "theme.bar.buttons.windowtitle.icon": "#C3AAF0",
+  "theme.bar.buttons.windowtitle.text": "#C3AAF0",
+  "theme.bar.buttons.windowtitle.hover": "#5D4B7D",
+  "theme.bar.buttons.windowtitle.background": "#362D46",
+  "theme.bar.buttons.workspaces.numbered_active_text_color": "#FFFFFF",
+  "theme.bar.buttons.workspaces.active": "#F0D4AA",
+  "theme.bar.buttons.workspaces.available": "#C3AAF0",
+  "theme.bar.buttons.workspaces.hover": "#5D4B7D",
+  "theme.bar.buttons.workspaces.background": "#362D46",
+  "theme.bar.buttons.dashboard.icon": "#ADAAF0",
+  "theme.bar.buttons.dashboard.hover": "#5D4B7D",
+  "theme.bar.buttons.dashboard.background": "#362D46",
+  "theme.osd.label": "#C3AAF0",
+  "theme.osd.icon": "#362D46",
+  "theme.osd.bar_empty_color": "#4C3A6B",
+  "theme.osd.bar_color": "#C3AAF0",
+  "theme.osd.icon_container": "#C3AAF0",
+  "theme.osd.bar_container": "#362D46",
+  "theme.notification.close_button.label": "#362D46",
+  "theme.notification.labelicon": "#C3AAF0",
+  "theme.notification.text": "#FFFFFF",
+  "theme.notification.time": "#947AC2",
+  "theme.notification.border": "#4C3A6B",
+  "theme.notification.label": "#C3AAF0",
+  "theme.notification.actions.text": "#362D46",
+  "theme.notification.actions.background": "#C3AAF0",
+  "theme.notification.background": "#362D46",
+  "theme.bar.buttons.workspaces.numbered_active_highlighted_text_color": "#5F5E73",
+  "theme.bar.buttons.workspaces.numbered_active_underline_color": "#F0D4AA",
+  "theme.bar.menus.menu.media.card.color": "#4C3A6B",
+  "theme.bar.menus.check_radio_button.background": "#362D46",
+  "theme.bar.menus.check_radio_button.active": "#FFFFFF",
+  "theme.bar.transparent": true,
+  "bar.layouts": {
+    "0": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "network",
+        "bluetooth",
+        "systray",
+        "clock",
+        "notifications"
+      ]
+    },
+    "1": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "clock",
+        "notifications"
+      ]
+    },
+    "2": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "clock",
+        "notifications"
+      ]
+    }
+  },
+  "theme.bar.location": "top",
+  "bar.workspaces.workspaces": 8,
+  "menus.dashboard.powermenu.avatar.image": "/home/paule/Downloads/Umbreon.png",
+  "menus.dashboard.powermenu.avatar.name": "Paule",
+  "menus.clock.weather.location": "Rio de Janeiro",
+  "menus.clock.weather.unit": "metric",
+  "theme.osd.orientation": "horizontal",
+  "theme.osd.location": "top",
+  "menus.clock.weather.enabled": false,
+  "theme.bar.menus.monochrome": true,
+  "menus.dashboard.shortcuts.left.shortcut4.command": "pkill -x rofi || $scrPath/rofilaunch.sh d",
+  "menus.dashboard.shortcuts.left.shortcut3.command": "WebCord",
+  "bar.workspaces.show_numbered": true,
+  "bar.customModules.cpuTemp.pollingInterval": 100,
+  "menus.media.displayTimeTooltip": false,
+  "theme.bar.border.location": "none",
+  "theme.bar.layer": "top",
+  "bar.launcher.icon": "󰣇",
+  "bar.launcher.autoDetectIcon": false,
+  "theme.bar.buttons.dashboard.enableBorder": false,
+  "menus.dashboard.shortcuts.left.shortcut3.tooltip": "Discord",
+  "menus.dashboard.shortcuts.left.shortcut2.command": "com.mastermindzh.tidal-hifi",
+  "menus.dashboard.shortcuts.left.shortcut2.tooltip": "Tidal",
+  "bar.launcher.middleClick": ".local/share/bin/rofilaunch.sh d",
+  "bar.launcher.rightClick": ".local/share/bin/rofilaunch.sh d",
+  "bar.workspaces.showApplicationIcons": false,
+  "bar.workspaces.showWsIcons": false,
+  "bar.workspaces.applicationIconOncePerWorkspace": false,
+  "bar.workspaces.spacing": 1,
+  "bar.workspaces.applicationIconEmptyWorkspace": "",
+  "bar.workspaces.workspaceMask": false,
+  "bar.workspaces.show_icons": false,
+  "theme.bar.floating": false,
+  "theme.bar.buttons.enableBorders": true,
+  "theme.bar.buttons.borderSize": "0.15em",
+  "menus.transitionTime": 175,
+  "theme.bar.scaling": 95,
+  "menus.dashboard.shortcuts.left.shortcut1.command": "librewolf",
+  "menus.dashboard.shortcuts.left.shortcut1.tooltip": "Librewolf",
+  "menus.dashboard.shortcuts.left.shortcut1.icon": "",
+  "menus.dashboard.stats.interval": 4000,
+  "bar.clock.format": "%a %b %d  %H:%M",
+  "bar.network.truncation_size": 28,
+  "bar.workspaces.numbered_active_indicator": "underline",
+  "theme.bar.buttons.workspaces.numbered_active_highlight_border": "0.2em"
+}

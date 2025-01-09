@@ -1,0 +1,94 @@
+# Example icons for Waybar configuration
+
+# Battery icon
+battery = ""
+
+# Volume icon
+volume = ""
+
+# Network icon
+network = ""
+
+# CPU icon
+cpu = ""
+
+# Memory icon
+memory = ""
+
+# Disk icon
+disk = ""
+
+# Time icon
+time = ""
+
+# Date icon
+date = ""
+
+# Weather icon
+weather = ""
+# Workspace icons
+
+# Programming icon
+programming = ""
+
+# Gaming icon
+gaming = ""
+
+# Productivity icon
+productivity = ""
+
+# Document icon
+document = ""
+
+# Folder icon
+folder = ""
+
+# Download icon
+download = ""
+
+# Upload icon
+upload = ""
+
+# Settings icon
+settings = ""
+
+# Lock icon
+lock = ""
+󰕄
+# Unlock icon
+unlock = ""
+
+# Trash icon
+trash = ""
+
+# Search icon
+search = ""
+
+# Info icon
+info = ""
+
+# Miscellaneous icon
+misc = ""
+
+# Arch Linux icon
+arch = ""
+
+# Hyprland icon
+hypr = ""
+
+# Music icon
+music = ""
+
+# Terminal icon
+terminal = ""
+
+󰖀 - Chat
+󰍉 - Chat Bubble
+󰕄 - Media
+󰇮 - Code
+󰇧 - Terminal
+󰇨 - Browser
+󰇩 - Music
+󰇪 - Lock/Security
+󰇫 - Cloud
+󰇬 - Game Controller

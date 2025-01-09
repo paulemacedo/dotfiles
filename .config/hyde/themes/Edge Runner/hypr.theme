@@ -1,0 +1,46 @@
+$HOME/.config/hypr/themes/theme.conf|> $HOME/.config/hypr/themes/colors.conf
+#  P̳r̳a̳s̳a̳n̳t̳h̳ R̳a̳n̳g̳a̳n̳
+
+exec = gsettings set org.gnome.desktop.interface icon-theme Tela-circle-yellow
+exec = gsettings set org.gnome.desktop.interface gtk-theme Edge-Runner
+exec = gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+
+general {
+    gaps_in = 8
+    gaps_out = 15
+    border_size = 4
+    col.active_border = rgba(FADA16ff) rgba(4DBD4Fff) 45deg
+    col.inactive_border = rgba(5032ACff) rgba(1F5322ff) 45deg
+    layout = dwindle
+    resize_on_border = true
+}
+
+group {
+    col.border_active = rgba(FADA16ff) rgba(4DBD4Fff) 45deg
+    col.border_inactive = rgba(5032ACff) rgba(1F5322ff) 45deg
+    col.border_locked_active = rgba(FADA16ff) rgba(4DBD4Fff) 45deg
+    col.border_locked_inactive = rgba(5032ACff) rgba(1F5322ff) 45deg
+}
+
+decoration {
+    rounding = 0
+
+    shadow {
+        enabled = true
+        range = 0
+        ignore_window = true
+        offset = 0 0
+        render_power = 4
+        color = 0x000000
+    }
+
+
+    blur {
+        enabled = yes
+        size = 6
+        passes = 3
+        new_optimizations = on
+        ignore_opacity = on
+        xray = false
+    }
+}
