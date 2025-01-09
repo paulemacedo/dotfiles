@@ -25,6 +25,7 @@ Using `paru`:
 paru -Syu hyprland-git wlogout
 ```
 ## Screenshots
+![Desktop](./Screenshots/Desktop.png)
 
 ## References
 - [prasanthrangan's hyprdots](https://github.com/prasanthrangan/hyprdots)
