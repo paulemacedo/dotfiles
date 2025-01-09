@@ -1,6 +1,5 @@
 # dotfiles
 
-
 | APP | Package |
 | --- | ------- |
 | Shell | Fish |
@@ -8,7 +7,9 @@
 | Status Bar | Hyprpanel |
 | Editor | Code |
 | Terminal | Kitty |
-| File Manager | Ranger |
+| File Manager | Dolphin |
+
+<!-- Take a look at Ranger e Neovim --->
 
 ## Usage
 ### Requirements
@@ -24,6 +25,7 @@ Using `paru`:
 paru -Syu hyprland-git wlogout
 ```
 ## Screenshots
+
 ## References
 - [prasanthrangan's hyprdots](https://github.com/prasanthrangan/hyprdots)
 - [nabakdev's dotfiles](https://github.com/nabakdev/dotfiles)
