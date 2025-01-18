@@ -10,7 +10,7 @@
 | File Manager | Dolphin |
 
 <!-- Take a look at Ranger e Neovim --->
-
+<!--
 ## Usage
 ### Requirements
 You can use either `yay` or `paru` to install the necessary packages.
@@ -24,6 +24,8 @@ Using `paru`:
 ```bash
 paru -Syu hyprland-git wlogout
 ```
+-->
+
 ## Screenshots
 ![Desktop](./Screenshots/Desktop.png)
 
