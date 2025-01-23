@@ -1,19 +1,19 @@
 $HOME/.config/hypr/themes/theme.conf|> $HOME/.config/hypr/themes/colors.conf
 
-$SDDM_THEME=MacOS
-$GTK_THEME = MacOS
-$ICON_THEME =MacOS
-$CURSOR_THEME=MacOS-Cursor
-
-exec = gsettings set org.gnome.desktop.interface icon-theme '$ICON_THEME'
-exec = gsettings set org.gnome.desktop.interface gtk-theme '$GTK_THEME'
+exec = Hyde sddm set MacOS
+exec = gsettings set org.gnome.desktop.interface icon-theme 'MacOS'
+exec = gsettings set org.gnome.desktop.interface gtk-theme 'MacOS'
 exec = gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
 # // You can use the commands below or use the HyDE CLI to set the cursor globally
-# exec = gsettings set org.gnome.desktop.interface cursor-theme '$CURSOR_THEME'
+# exec = gsettings set org.gnome.desktop.interface cursor-theme 'MacOS-Cursor'
 # exec = gsettings set org.gnome.desktop.interface cursor-size 20
 # exec = hyprctl setcursor MacOS-Cursor 20
-exec = Hyde cursor theme '$CURSOR_THEME' size 30
+exec = Hyde cursor theme 'MacOS-Cursor' size 30
+
+exec = ~/.local/share/bin/x11cursor.sh MacOS-Cursor 30
+exec = flatpak override --user --env=GTK_THEME=MacOS:dark
+
 
 # // Set the sddm theme here
 exec = Hyde sddm set $SDDM_THEME

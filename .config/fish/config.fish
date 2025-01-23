@@ -26,4 +26,18 @@ function fish_greeting
      pokemon-colorscripts -r
 end
 
+function webstorm
+    command webstorm $argv > /dev/null 2>&1 & disown
+end
+
+# Em config.fish
+function pycharm-eap
+    /opt/pycharm-eap/bin/pycharm.sh $argv > /dev/null 2>&1 & disown
+end
+
+function rustrover
+    /opt/rustrover/bin/rustrover $argv > /dev/null 2>&1 & disown
+end
+
+
 fish_add_path /home/paule/.spicetify

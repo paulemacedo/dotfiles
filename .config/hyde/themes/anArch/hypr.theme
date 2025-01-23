@@ -11,6 +11,11 @@ exec = gsettings set org.gnome.desktop.interface icon-theme '$ICON-THEME'
 exec = gsettings set org.gnome.desktop.interface gtk-theme '$GTK-THEME'
 exec = gsettings set org.gnome.desktop.interface color-scheme '$COLOR_SCHEME'
 
+exec = flatpak override --user --env=GTK_THEME=Red-Stone:dark
+
+
+exec = ~/.local/share/bin/x11cursor.sh
+
 # // Set the sddm theme here
 exec = Hyde sddm set $SDDM-THEME
 

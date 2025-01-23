@@ -13,6 +13,10 @@ exec = gsettings set org.gnome.desktop.interface color-scheme '$COLOR_SCHEME'
 exec = Hyde cursor theme '$CURSOR_THEME' size $CURSOR_SIZE
 exec = Hyde code theme '$CODE_THEME'
 
+exec = ~/.local/share/bin/x11cursor.sh '$CURSOR_THEME' $CURSOR_SIZE
+exec = flatpak override --user --env=GTK_THEME=Eternal-Arctic:dark
+
+
 general {
     border_size = 3
     col.inactive_border = rgba(434c5ebb) # Nord Polar Night (no. 1) with reduced opacity

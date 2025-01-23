@@ -5,6 +5,9 @@ exec = gsettings set org.gnome.desktop.interface icon-theme Tela-circle-purple
 exec = gsettings set org.gnome.desktop.interface gtk-theme Tokyo-Night
 exec = gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 
+exec = ~/.local/share/bin/x11cursor.sh
+exec = flatpak override --user --env=GTK_THEME=Tokyo-Night:dark
+
 general {
     gaps_in = 3
     gaps_out = 8

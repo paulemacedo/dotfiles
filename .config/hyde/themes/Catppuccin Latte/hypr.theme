@@ -5,6 +5,11 @@ exec = gsettings set org.gnome.desktop.interface icon-theme Tela-circle-grey
 exec = gsettings set org.gnome.desktop.interface gtk-theme Catppuccin-Latte
 exec = gsettings set org.gnome.desktop.interface color-scheme prefer-light
 
+exec = ~/.local/share/bin/x11cursor.sh
+
+exec = flatpak override --user --env=GTK_THEME=Catppuccin-Latte
+
+
 general {
     gaps_in = 3
     gaps_out = 8

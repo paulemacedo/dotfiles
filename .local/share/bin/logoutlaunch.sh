@@ -26,16 +26,33 @@ if [ ! -f "${wLayout}" ] || [ ! -f "${wlTmplt}" ] ; then
 fi
 
 
-#// detect monitor res
+# ...existing code...
 
+# Detect monitor resolution
 x_mon=$(hyprctl -j monitors | jq '.[] | select(.focused==true) | .width')
 y_mon=$(hyprctl -j monitors | jq '.[] | select(.focused==true) | .height')
 hypr_scale=$(hyprctl -j monitors | jq '.[] | select (.focused == true) | .scale' | sed 's/\.//')
+orientation=$(hyprctl -j monitors | jq '.[] | select(.focused==true) | .transform')
 
 
-#// scale config layout and style
+# Check if resolution is 1080x1920
+if [ "$x_mon" -eq 1080 ] && [ "$y_mon" -eq 1920 ]; then
+    hypr_scale=1  # Assuming no scaling for this resolution
+fi
 
-case "${wlogoutStyle}" in
+if [ "${orientation}" -eq 1 ] ; then
+    case "${wlogoutStyle}" in
+        1)  wlColms=6
+            export mgn=$(( y_mon * 28 / hypr_scale ))
+            export hvr=$(( y_mon * 23 / hypr_scale )) ;;
+        2)  wlColms=2
+            export y_mgn=$(( x_mon * 35 / hypr_scale ))
+            export x_mgn=$(( y_mon * 25 / hypr_scale ))
+            export y_hvr=$(( x_mon * 32 / hypr_scale ))
+            export x_hvr=$(( y_mon * 20 / hypr_scale )) ;;
+    esac
+else
+    case "${wlogoutStyle}" in
     1)  wlColms=6
         export mgn=$(( y_mon * 28 / hypr_scale ))
         export hvr=$(( y_mon * 23 / hypr_scale )) ;;
@@ -44,13 +61,14 @@ case "${wlogoutStyle}" in
         export y_mgn=$(( y_mon * 25 / hypr_scale ))
         export x_hvr=$(( x_mon * 32 / hypr_scale ))
         export y_hvr=$(( y_mon * 20 / hypr_scale )) ;;
-esac
+    esac
+fi
 
+# Apply center alignment
+export x_center
 
 #// scale font size
-
 export fntSize=$(( y_mon * 2 / 100 ))
-
 
 #// detect wallpaper brightness
 

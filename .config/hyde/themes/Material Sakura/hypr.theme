@@ -5,6 +5,9 @@ exec = gsettings set org.gnome.desktop.interface icon-theme Tela-circle-black
 exec = gsettings set org.gnome.desktop.interface gtk-theme Material-Sakura
 exec = gsettings set org.gnome.desktop.interface color-scheme prefer-light
 
+exec = ~/.local/share/bin/x11cursor.sh
+exec = flatpak override --user --env=GTK_THEME=Material-Sakura
+
 general {
     gaps_in = 8
     gaps_out = 14

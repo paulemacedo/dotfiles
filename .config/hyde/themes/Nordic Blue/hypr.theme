@@ -10,6 +10,9 @@ exec = gsettings set org.gnome.desktop.interface icon-theme Nordzy
 exec = gsettings set org.gnome.desktop.interface gtk-theme Nordic-Blue
 exec = gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 
+exec = ~/.local/share/bin/x11cursor.sh
+exec = flatpak override --user --env=GTK_THEME=Nordic-Blue:dark
+
 general {
     gaps_in = 3
     gaps_out = 8

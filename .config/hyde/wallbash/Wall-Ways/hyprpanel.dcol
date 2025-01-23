@@ -11,7 +11,7 @@ ${cacheDir}/landing/wallbash-hyprpanel.json | hyprpanel useTheme ~/.cache/hyde/l
   "theme.bar.buttons.background": "#<wallbash_1xa1>",
   "theme.bar.menus.text": "#<wallbash_txt1>",
   "theme.bar.menus.border.color": "#<wallbash_1xa2>",
-  "theme.bar.buttons.media.background": "#<wallbash_1xa1>",
+  "theme.bar.buttons.media.background": "#<wallbash_pry1>",
   "theme.bar.menus.menu.volume.text": "#<wallbash_txt1>",
   "theme.bar.menus.menu.volume.card.color": "#<wallbash_1xa2>",
   "theme.bar.menus.menu.volume.label.color": "#<wallbash_1xa8>",

@@ -1,17 +1,14 @@
 $HOME/.config/hypr/themes/theme.conf|> $HOME/.config/hypr/themes/colors.conf
 
-$GTK_THEME = Rain-Dark
-$ICON_THEME = Rain-Dark
-$COLOR_SCHEME=prefer-dark
-$CURSOR_THEME = Capitaine-Cursors-Tokyonight
-$CURSOR_SIZE=20
-$CODE_THEME=Tokyo Night Storm
+exec = gsettings set org.gnome.desktop.interface icon-theme 'Rain-Dark'
+exec = gsettings set org.gnome.desktop.interface gtk-theme 'Rain-Dark'
+exec = gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+exec = Hyde cursor theme 'Capitaine-Cursors-Tokyonight' size 20
+exec = Hyde code theme 'Tokyo Night Storm'
 
-exec = gsettings set org.gnome.desktop.interface icon-theme '$ICON_THEME'
-exec = gsettings set org.gnome.desktop.interface gtk-theme '$GTK_THEME'
-exec = gsettings set org.gnome.desktop.interface color-scheme '$COLOR_SCHEME'
-exec = Hyde cursor theme '$CURSOR_THEME' size $CURSOR_SIZE
-exec = Hyde code theme '$CODE_THEME'
+exec = ~/.local/share/bin/x11cursor.sh 'Capitaine-Cursors-Tokyonight' 20
+exec = flatpak override --user --env=GTK_THEME=Rain-Dark:dark
+
 
 general {
     gaps_in = 3
