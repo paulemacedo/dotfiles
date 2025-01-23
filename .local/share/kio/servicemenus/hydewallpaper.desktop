@@ -1,0 +1,125 @@
+[Desktop Entry]
+Type=Service
+MimeType=image/png;image/jpeg;image/jpg;image/gif
+Actions=Menu-Refresh;Catppuccin Mocha;Pixel Dream;Catppuccin Latte;Oxo Carbon;Monokai;Rosé Pine;Green Lush;Tokyo Night;Material Sakura;Paranoid Sweet;Graphite Mono;Rain Dark;anArch;Decay Green;Red Stone;Edge Runner;Dracula;Frosted Glass;Gruvbox Retro;One Dark;Hack the Box;Synth Wave;Mac OS;Nordic Blue;Ever Blushing;Eternal Arctic;Another World;Vanta Black;Crimson Blade
+X-KDE-Submenu=Set As Wallpaper...
+
+[Desktop Action Menu-Refresh]
+Name=.: Refresh List :.
+Exec=swwwallkon.sh
+
+[Desktop Action Catppuccin Mocha]
+Name=Catppuccin Mocha
+Exec=swwwallkon.sh -t "Catppuccin Mocha" -w %u
+
+[Desktop Action Pixel Dream]
+Name=Pixel Dream
+Exec=swwwallkon.sh -t "Pixel Dream" -w %u
+
+[Desktop Action Catppuccin Latte]
+Name=Catppuccin Latte
+Exec=swwwallkon.sh -t "Catppuccin Latte" -w %u
+
+[Desktop Action Oxo Carbon]
+Name=Oxo Carbon
+Exec=swwwallkon.sh -t "Oxo Carbon" -w %u
+
+[Desktop Action Monokai]
+Name=Monokai
+Exec=swwwallkon.sh -t "Monokai" -w %u
+
+[Desktop Action Rosé Pine]
+Name=Rosé Pine
+Exec=swwwallkon.sh -t "Rosé Pine" -w %u
+
+[Desktop Action Green Lush]
+Name=Green Lush
+Exec=swwwallkon.sh -t "Green Lush" -w %u
+
+[Desktop Action Tokyo Night]
+Name=Tokyo Night
+Exec=swwwallkon.sh -t "Tokyo Night" -w %u
+
+[Desktop Action Material Sakura]
+Name=Material Sakura
+Exec=swwwallkon.sh -t "Material Sakura" -w %u
+
+[Desktop Action Paranoid Sweet]
+Name=Paranoid Sweet
+Exec=swwwallkon.sh -t "Paranoid Sweet" -w %u
+
+[Desktop Action Graphite Mono]
+Name=Graphite Mono
+Exec=swwwallkon.sh -t "Graphite Mono" -w %u
+
+[Desktop Action Rain Dark]
+Name=Rain Dark
+Exec=swwwallkon.sh -t "Rain Dark" -w %u
+
+[Desktop Action anArch]
+Name=anArch
+Exec=swwwallkon.sh -t "anArch" -w %u
+
+[Desktop Action Decay Green]
+Name=Decay Green
+Exec=swwwallkon.sh -t "Decay Green" -w %u
+
+[Desktop Action Red Stone]
+Name=Red Stone
+Exec=swwwallkon.sh -t "Red Stone" -w %u
+
+[Desktop Action Edge Runner]
+Name=Edge Runner
+Exec=swwwallkon.sh -t "Edge Runner" -w %u
+
+[Desktop Action Dracula]
+Name=Dracula
+Exec=swwwallkon.sh -t "Dracula" -w %u
+
+[Desktop Action Frosted Glass]
+Name=Frosted Glass
+Exec=swwwallkon.sh -t "Frosted Glass" -w %u
+
+[Desktop Action Gruvbox Retro]
+Name=Gruvbox Retro
+Exec=swwwallkon.sh -t "Gruvbox Retro" -w %u
+
+[Desktop Action One Dark]
+Name=One Dark
+Exec=swwwallkon.sh -t "One Dark" -w %u
+
+[Desktop Action Hack the Box]
+Name=Hack the Box
+Exec=swwwallkon.sh -t "Hack the Box" -w %u
+
+[Desktop Action Synth Wave]
+Name=Synth Wave
+Exec=swwwallkon.sh -t "Synth Wave" -w %u
+
+[Desktop Action Mac OS]
+Name=Mac OS
+Exec=swwwallkon.sh -t "Mac OS" -w %u
+
+[Desktop Action Nordic Blue]
+Name=Nordic Blue
+Exec=swwwallkon.sh -t "Nordic Blue" -w %u
+
+[Desktop Action Ever Blushing]
+Name=Ever Blushing
+Exec=swwwallkon.sh -t "Ever Blushing" -w %u
+
+[Desktop Action Eternal Arctic]
+Name=Eternal Arctic
+Exec=swwwallkon.sh -t "Eternal Arctic" -w %u
+
+[Desktop Action Another World]
+Name=Another World
+Exec=swwwallkon.sh -t "Another World" -w %u
+
+[Desktop Action Vanta Black]
+Name=Vanta Black
+Exec=swwwallkon.sh -t "Vanta Black" -w %u
+
+[Desktop Action Crimson Blade]
+Name=Crimson Blade
+Exec=swwwallkon.sh -t "Crimson Blade" -w %u

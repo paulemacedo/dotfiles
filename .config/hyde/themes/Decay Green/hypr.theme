@@ -5,6 +5,10 @@ exec = gsettings set org.gnome.desktop.interface icon-theme Tela-circle-green
 exec = gsettings set org.gnome.desktop.interface gtk-theme Decay-Green
 exec = gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 
+exec = ~/.local/share/bin/x11cursor.sh
+
+exec = flatpak override --user --env=GTK_THEME=Decay-Green:dark
+
 general {
     gaps_in = 3
     gaps_out = 8

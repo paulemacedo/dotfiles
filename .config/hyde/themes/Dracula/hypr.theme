@@ -8,6 +8,10 @@ exec = hyprctl setcursor Dracula-cursors 25
 exec = gsettings set org.gnome.desktop.interface cursor-theme 'Dracula-cursors'
 exec = gsettings set org.gnome.desktop.interface cursor-size 25
 
+exec = ~/.local/share/bin/x11cursor.sh Dracula-cursors 25
+exec = flatpak override --user --env=GTK_THEME=Dracula:dark
+
+
 general {
     gaps_in = 12
     gaps_out = 18

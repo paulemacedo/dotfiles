@@ -13,6 +13,9 @@ exec = gsettings set org.gnome.desktop.interface color-scheme '$COLOR_SCHEME'
 exec = Hyde cursor theme '$CURSOR_THEME' size $CURSOR_SIZE
 exec = Hyde code theme '$CODE_THEME'
 
+exec = ~/.local/share/bin/x11cursor.sh '$CURSOR_THEME' $CURSOR_SIZE
+exec = flatpak override --user --env=GTK_THEME=Vanta-Black:dark
+
 general {
     gaps_in = 5
     gaps_out = 10

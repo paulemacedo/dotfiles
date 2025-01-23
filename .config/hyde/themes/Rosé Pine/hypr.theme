@@ -4,6 +4,9 @@ exec = gsettings set org.gnome.desktop.interface icon-theme 'Tela-circle-pink'
 exec = gsettings set org.gnome.desktop.interface gtk-theme 'Rose-Pine'
 exec = gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
+exec = ~/.local/share/bin/x11cursor.sh
+exec = flatpak override --user --env=GTK_THEME=Rose-Pine:dark
+
 general {
     gaps_in = 3
     gaps_out = 8

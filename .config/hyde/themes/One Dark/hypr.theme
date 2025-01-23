@@ -6,6 +6,9 @@ exec = gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 exec = hyprctl setcursor onedark-cursor 25
 exec = gsettings set org.gnome.desktop.interface cursor-theme 'onedark-cursor'
 exec = gsettings set org.gnome.desktop.interface cursor-size 25
+exec = flatpak override --user --env=GTK_THEME=One-Dark:dark
+
+exec = ~/.local/share/bin/x11cursor.sh onedark-cursor 25
 
 general {
     gaps_in = 12

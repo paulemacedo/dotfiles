@@ -10,6 +10,10 @@ exec = gsettings set org.gnome.desktop.interface gtk-theme '$GTK_THEME'
 exec = gsettings set org.gnome.desktop.interface color-scheme '$COLOR_SCHEME'
 exec = Hyde code theme '$CODE_THEME'
 
+exec = ~/.local/share/bin/x11cursor.sh
+exec = flatpak override --user --env=GTK_THEME=Ever-Blush:dark
+
+
 general {
     border_size = 3
     col.inactive_border = rgba(232a2dff) 

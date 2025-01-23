@@ -5,6 +5,10 @@ exec = gsettings set org.gnome.desktop.interface gtk-theme "Kripton"
 exec = gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 exec = Hyde cursor theme 'Future-cyan-cursors' size 20
 
+exec = ~/.local/share/bin/x11cursor.sh Future-cyan-cursors 20
+
+exec = flatpak override --user --env=GTK_THEME=Kripton:dark
+
 general {
     gaps_in = 0
     gaps_out = 1

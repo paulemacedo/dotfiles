@@ -14,6 +14,10 @@ exec = gsettings set org.gnome.desktop.interface cursor-theme 'Gruvbox-Retro'
 exec = gsettings set org.gnome.desktop.interface cursor-size 20
 exec = hyprctl setcursor Gruvbox-Retro 20
 
+exec = ~/.local/share/bin/x11cursor.sh Gruvbox-Retro 20
+exec = flatpak override --user --env=GTK_THEME=Gruvbox-Retro:dark
+
+
 general {
     gaps_in = 3
     gaps_out = 8

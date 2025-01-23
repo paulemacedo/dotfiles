@@ -5,6 +5,11 @@ exec = gsettings set org.gnome.desktop.interface icon-theme Tela-circle-yellow
 exec = gsettings set org.gnome.desktop.interface gtk-theme Edge-Runner
 exec = gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 
+exec = ~/.local/share/bin/x11cursor.sh
+
+exec = flatpak override --user --env=GTK_THEME=Edge-Runner:dark
+
+
 general {
     gaps_in = 8
     gaps_out = 15

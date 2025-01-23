@@ -12,6 +12,10 @@ exec = gsettings set org.gnome.desktop.interface icon-theme $ICON_THEME
 exec = gsettings set org.gnome.desktop.interface gtk-theme $GTK_THEME
 exec = gsettings set org.gnome.desktop.interface color-scheme $COLOR_SCHEME
 
+exec = ~/.local/share/bin/x11cursor.sh
+
+exec = flatpak override --user --env=GTK_THEME=Graphite-Mono:dark
+
 
 general {
     gaps_in = 8
