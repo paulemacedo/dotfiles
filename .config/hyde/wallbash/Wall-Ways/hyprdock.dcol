@@ -1,0 +1,42 @@
+${HOME}/.config/nwg-dock-hyprland/style.css | .local/share/bin/hyprdock.sh -q
+
+window {
+  background: #<wallbash_pry1>;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #<wallbash_1xa2>;
+}
+
+#box {
+  padding: 5px;
+}
+
+#active {
+  border-bottom: solid 1px;
+  border-color: #<wallbash_txt1>;
+}
+
+button, image {
+  background: none;
+  border-style: none;
+  box-shadow: none;
+  color: #<wallbash_1xa9>;
+}
+
+button {
+  padding: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
+  color: #<wallbash_txt1>;
+  font-size: 12px;
+}
+
+button:hover {
+  background-color: #<wallbash_1xa3>;
+  border-radius: 2px;
+}
+
+button:focus {
+  box-shadow: none;
+}

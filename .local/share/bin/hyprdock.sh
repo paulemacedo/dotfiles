@@ -92,6 +92,30 @@ function set_monitor {
     fi
 }
 
+CURRENT_CONFIG=$(load_config)
+AUTOHIDE=$(echo "$CURRENT_CONFIG" | cut -d':' -f1)
+FULLSCREEN=$(echo "$CURRENT_CONFIG" | cut -d':' -f2)
+MONITOR=$(echo "$CURRENT_CONFIG" | cut -d':' -f3)
+EXCLUSIVE=$(echo "$CURRENT_CONFIG" | cut -d':' -f4)
+
+CMD="$HYPRDOCK_CMD"
+
+if [ "$AUTOHIDE" == "autohide" ]; then
+    CMD+=" -d"
+fi
+
+if [ "$FULLSCREEN" == "fullscreen" ]; then
+    CMD+=" -f"
+fi
+
+if [ "$EXCLUSIVE" == "exclusive" ]; then
+    CMD+=" -x"
+fi
+
+if [ "$MONITOR" != "NULL" ]; then
+    CMD+=" -o $MONITOR"
+fi
+
 if [ "$1" == "-m" ]; then
     SELECTED_OPTION=$(show_rofi_menu)
     
@@ -121,33 +145,12 @@ elif [ "$1" == "-t" ]; then
     activemonitor=$(echo "$workspace_info" | grep 'on monitor' | awk -F 'on monitor ' '{print $2}' | awk '{print $1}' | sed 's/://')
     nwg-dock-hyprland -o "$activemonitor"
     notify-send "Hyprdock toggled to $activemonitor"
-else
-    CURRENT_CONFIG=$(load_config)
-    AUTOHIDE=$(echo "$CURRENT_CONFIG" | cut -d':' -f1)
-    FULLSCREEN=$(echo "$CURRENT_CONFIG" | cut -d':' -f2)
-    MONITOR=$(echo "$CURRENT_CONFIG" | cut -d':' -f3)
-    EXCLUSIVE=$(echo "$CURRENT_CONFIG" | cut -d':' -f4)
-    
-    CMD="$HYPRDOCK_CMD"
-    
-    if [ "$AUTOHIDE" == "autohide" ]; then
-        CMD+=" -d"
-    fi
-    
-    if [ "$FULLSCREEN" == "fullscreen" ]; then
-        CMD+=" -f"
-    fi
-
-    if [ "$EXCLUSIVE" == "exclusive" ]; then
-        CMD+=" -x"
-    fi
-
-    if [ "$MONITOR" != "NULL" ]; then
-        CMD+=" -o $MONITOR"
-    fi
-    
+elif [ "$1" == "-q" ]; then
+    killall nwg-dock-hyprland
     $CMD
 
+else
+    $CMD
     if [ "$MONITOR" == "NULL" ]; then
         notify-send "Hyprdock started on active monitor"
     else 
